@@ -37,4 +37,18 @@ it 'returns docked bikes' do
     end
   end
 
+  describe '#initialize' do
+    it 'sets default value to 20' do
+      dock = DockingStation.new
+      dock.instance_variable_get(:@capacity).should eq 20
+    end
+  end
+
+  describe '#initialize' do
+    it 'sets value to 15' do
+      dock = DockingStation.new(15)
+      dock.instance_variable_get(:@capacity).should eq 15
+    end
+  end
+
  end
